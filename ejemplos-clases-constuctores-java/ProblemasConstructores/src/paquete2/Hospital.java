@@ -20,6 +20,12 @@ public class Hospital {
         valores que serán asignados a los atributos.
     
     */
+    public Hospital(String name,String ciudad,int numDoc, int numEnfer){
+        nombre = name;
+        ciudad = ciudad;
+        numeroDoctores = numDoc;
+        numeroEnfermeros = numEnfer;
+    }
     
     public void establecerNombre(String n){
         nombre = n;
@@ -52,5 +58,6 @@ public class Hospital {
     public int obtenerNumeroEnfermeros(){
         return numeroEnfermeros;
     }
+    
     
 }

@@ -1,14 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package paquete1;
 
-/**
- *
- * @author reroes
- */
 public class Hospital {
     private String nombre;
     private String ciudad;
@@ -25,7 +17,12 @@ public class Hospital {
     numeroEnfermeros: 200
     
     */
-    
+    public Hospital(){
+        nombre = "Isidro Ayora";
+        ciudad = "Loja";
+        numeroDoctores = 105;
+        numeroEnfermeros = 78;
+    }
     public void establecerNombre(String n){
         nombre = n;
     }
@@ -56,6 +53,19 @@ public class Hospital {
     
     public int obtenerNumeroEnfermeros(){
         return numeroEnfermeros;
+    }
+    @Override
+    public String toString() {
+        String cadena = String.format("Los datos del hospital\n"
+                +"Nombre: %s\n"
+                +"Ciudad: %s\n"
+                +"Numero de doctores: %d\n"
+                +"Numero de enfermeros:%d\n",
+                obtenerNombre(),
+                obtenerCiudad(),
+                obtenerNumeroDoctores(),
+                obtenerNumeroEnfermeros());
+        return cadena;
     }
     
 }
